@@ -12,7 +12,7 @@ class Post(models.Model):
     auth = models.ForeignKey(User , on_delete= models.CASCADE, related_name='blog_posts')
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now_add=True)
-    content = models.TimeField()
+    content = models.TextField()
     status = models.IntegerField(choices=STATUS, default=0 )
     image = models.ImageField(upload_to='post_images/', null=True, blank=True)
     
